@@ -3,6 +3,13 @@ import './Navbar.css';
 const Navbar = () => {
     return (
       <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand ml-5" href="#">
+          <img
+            style={{ width: "120.26px", height: "56px" }}
+            src={require("../../images/logo.png")}
+            alt=""
+          />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -19,7 +26,7 @@ const Navbar = () => {
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <a class="nav-link mr-5" href="#">
-                Home 
+                Home
               </a>
             </li>
             <li class="nav-item active">
