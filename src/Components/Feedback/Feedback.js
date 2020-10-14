@@ -1,35 +1,20 @@
-import React from 'react';
-import customer1 from "../../images/customer-1.png";
-import customer2 from "../../images/customer-2.png";
-import customer3 from "../../images/customer-3.png";
+import React, { useEffect, useState } from 'react';
+
 
 import Card from '../Card/Card';
 
 
-const clientData = [
-  {
-    img: customer1,
-    name: "Nash Patrik",
-    from: "CEO,Manpol",
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
-  },
-  {
-    img: customer2,
-    name: "Mirriam Barron",
-    from: "CEO,Manpol",
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
-  },
-  {
-    img: customer3,
-    name: "Bria Malone",
-    from: "CEO,Manpol",
-    quote:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
-  }
-];
+
 const Feedback = () => {
+   const [reviewData, setReviewData] = useState([]);
+   useEffect(() => {
+     fetch("http://localhost:5000/getReviews")
+       .then((res) => res.json())
+       .then((data) => {
+         console.log(data);
+         setReviewData(data);
+       });
+   }, []);
     return (
       <section>
         <div className="text-center mt-5">
@@ -38,7 +23,7 @@ const Feedback = () => {
           </h3>
         </div>
         <div className="card-deck mt-5">
-          {clientData.map((feedback) => (
+          {reviewData.map((feedback) => (
             <Card feedback={feedback} key={feedback.name} />
           ))}
         </div>

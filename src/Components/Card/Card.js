@@ -5,7 +5,12 @@ const Card = (props) => {
     return (
       <div className="card shadow-sm">
         <div className="card-footer d-flex  align-items-center">
-          <img className="mx-3" src={img} alt="" width="60" />
+          <img
+            className="mx-3"
+            src={require(`../../images/${img}`)}
+            alt=""
+            width="60"
+          />
           <div>
             <h6 className="name">{name}</h6>
             <p className="m-0 address">{from}</p>
