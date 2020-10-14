@@ -8,7 +8,7 @@ const BrandIcon = () => {
           <img  src={require("../../images/slack.png")} alt="" />
         </div>
         <div className="col-md-2">
-          <img src={require("../../images/google.png")} alt="" />
+          <img src={require("../../images/google1.png")} alt="" />
         </div>
         <div className="col-md-2">
           <img src={require("../../images/uber.png")} alt="" />

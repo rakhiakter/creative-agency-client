@@ -1,14 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 const Navbar = () => {
     return (
       <nav class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand ml-5" href="#">
-          <img
-            style={{ width: "120.26px", height: "56px" }}
-            src={require("../../images/logo.png")}
-            alt=""
-          />
+          <Link to="/"> 
+            
+            <img
+              style={{ width: "120.26px", height: "56px" }}
+              src={require("../../images/logo.png")}
+              alt=""
+            />
+          </Link>
         </a>
         <button
           class="navbar-toggler"
@@ -44,7 +48,9 @@ const Navbar = () => {
                 Contact Us
               </a>
             </li>
-            <button class="button">Login</button>
+            <Link to="/login">
+              <button class="button">Login</button>
+            </Link>
           </ul>
         </div>
       </nav>
