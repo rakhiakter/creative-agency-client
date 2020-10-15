@@ -18,7 +18,7 @@ const OrderBar = () => {
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <h3 class=" mr-5 activity">Order</h3>
+              <h3 class=" mr-auto activity">Order</h3>
              
             </li>
           </ul>

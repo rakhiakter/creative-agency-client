@@ -1,5 +1,12 @@
- .bar{
-   
-   
-    background: #FFFFFF;
-}
+ .bar {
+     background: #FFFFFF;
+ }
+
+ .cart {
+     float: left;
+ }
+
+ .pb {
+     color: #111111;
+     white-space: nowrap;
+ }
