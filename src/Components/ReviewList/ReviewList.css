@@ -1,0 +1,15 @@
+.style {
+    width: 800px;
+    height: 100px;
+    left: 600px;
+    top: 165px;
+}
+
+.bigArea {
+    width: 570px;
+    height: 400px;
+    left: 400px;
+    top: 317px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}

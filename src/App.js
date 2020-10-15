@@ -11,6 +11,11 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import { createContext } from 'react';
 import Order from './Components/Order/Order';
+import ServiceList from './Components/ServiceList/ServiceList';
+import ReviewList from './Components/ReviewList/ReviewList';
+import ListOfServices from './Components/ListOfServices/ListOfServices';
+import AddService from './Components/AddService/AddService';
+import MakeAdmin from './Components/MakeAdmin/MakeAdmin';
 
 
 
@@ -29,7 +34,11 @@ function App() {
           
           <Route path="/login" component={Login}/>
            <Route path="/order" component={Order}/>
-           
+           <Route path="/serviceList" component={ServiceList}/>
+           <Route path="/reviewList" component={ReviewList}/>
+           <Route path="/listOfServices" component={ListOfServices}/>
+           <Route path="/addService" component={AddService}/>
+           <Route path="/makeAdmin" component={MakeAdmin}/>
       </Switch>
     </Router>
     </UserContext.Provider>

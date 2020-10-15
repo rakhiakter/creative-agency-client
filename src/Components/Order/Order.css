@@ -1,9 +1,29 @@
 .order {
     width: 170px;
-    height: 60px;
+    height: 40px;
     left: 344px;
     top: 611px;
     background: #111430;
     border-radius: 5px;
     color: white;
+}
+
+label {
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    background: #DEFFED;
+    border: 1px solid #009444;
+}
+
+.font {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+   
+    color: #009444;
 }

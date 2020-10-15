@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Sidebar.css';
 const Sidebar = () => {
     return (
       <div
@@ -30,7 +30,7 @@ const Sidebar = () => {
           </li>
 
           <li>
-            <Link to="/review">
+            <Link to="/reviewList">
               <img
                 src={require("../../images/review 1368.png")}
                 alt=""
