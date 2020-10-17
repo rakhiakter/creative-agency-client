@@ -14,6 +14,7 @@ label {
     cursor: pointer;
     margin-top: 1rem;
     background: #DEFFED;
+    
     border: 1px solid #009444;
 }
 
@@ -28,6 +29,7 @@ label {
     left: 1272px;
     top: 438px;
     background: #009444;
+    border: none;
     border-radius: 5px;
 }
 

@@ -14,15 +14,7 @@
   
 }
 
-.em {
-    /* width: 700px;
-    left: 500px;
-    top: 176.33px;
-    background: #FFFFFF;
-    border: 0.666667px solid #C9C9C9;
-    box-sizing: border-box;
-    border-radius: 3.33333px; */
-}
+
 
 .newBtn {
     width: 108px;
@@ -30,6 +22,7 @@
     left: 826px;
     top: 176px;
     background: #009444;
+    border: none;
     border-radius: 5px;
 }
 

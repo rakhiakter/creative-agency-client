@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { useSpring, animated } from "react-spring";
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import './ProvideService.css';
 
@@ -13,6 +13,12 @@ const ProvideService = () => {
              setServiceData(data);
            });
        }, []);
+
+
+
+      //  const AnimatedDonut = animated(Donut);
+      //  const props = useSpring({ value: 100, from: { value: 0 } });
+      //  return <AnimatedDonut percent={props.value} />;
     return (
       <section className="mt-5">
         <div className="text-center web">
