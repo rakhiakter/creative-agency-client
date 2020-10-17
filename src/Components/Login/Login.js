@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './login.css';
-// import { useState } from "react";
+
 
 
 import { Link, useHistory, useLocation } from "react-router-dom";
@@ -25,10 +25,11 @@ const Login = () => {
      .auth()
      .signInWithPopup(provider)
      .then(function (result) {
-       const { displayName, email } = result.user;
-       const signedInUser = { name: displayName, email };
+       const { displayName, email, photoURL } = result.user;
+       const signedInUser = { name: displayName, email, photoURL };
        setLoggedInUser(signedInUser);
-       storeAuthToken();
+               history.replace(from);
+
      })
      .catch(function (error) {
        const errorMessage = error.message;
@@ -36,18 +37,7 @@ const Login = () => {
      });
  };
 
- const storeAuthToken = () => {
-   firebase
-     .auth()
-     .currentUser.getIdToken(/* forceRefresh */ true)
-     .then(function (idToken) {
-       sessionStorage.setItem("token", idToken);
-       history.replace(from);
-     })
-     .catch(function (error) {
-       // Handle error
-     });
- };
+
   return (
     <div className="container">
       <Link to="/">

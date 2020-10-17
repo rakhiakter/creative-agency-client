@@ -30,24 +30,31 @@ const Order = () => {
   
     const formData = new FormData();
     console.log(order);
-    formData.append("file", file);
-    formData.append("name", order.name);
-    formData.append("email", order.email);
-    formData.append("project", order.project);
-    formData.append("detail", order.detail);
-    formData.append("price", order.price);
-    
-    fetch("http://localhost:5000/addOrder", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    if (file === null){
+      alert("please select your Image")
+    }else{
+ formData.append("file", file);
+ formData.append("name", order.name);
+ formData.append("email", order.email);
+ formData.append("project", order.project);
+ formData.append("detail", order.detail);
+ formData.append("price", order.price);
+
+ fetch("http://localhost:5000/addOrder", {
+   method: "POST",
+   body: formData,
+ })
+   .then((response) => response.json())
+   .then((data) => {
+     console.log(data);
+     alert("Order placed successfully")
+     document.querySelector("#placed-order").reset()
+   })
+   .catch((error) => {
+     console.error(error);
+   });
+    }
+   
       e.preventDefault();
   };
     return (
@@ -58,7 +65,7 @@ const Order = () => {
             <Sidebar></Sidebar>
           </div>
           <div className="col-md-5 ">
-            <form class="mt-5" onSubmit={handleSubmit}>
+            <form class="mt-5" id="placed-order" onSubmit={handleSubmit}>
               <div class="form-group">
                 <input
                   onBlur={handleBlur}

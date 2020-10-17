@@ -17,7 +17,7 @@ const MakeAdmin = () => {
   const handleSubmit = () => {
     const formData = new FormData()
     formData.append('email', admin.email)
-    fetch('http:/localhost:5000/makeAdmin', {
+    fetch('http://localhost:5000/makeAdmin', {
       method: 'POST',
       body: formData
     })

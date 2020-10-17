@@ -16,6 +16,7 @@ import ReviewList from './Components/ReviewList/ReviewList';
 import ListOfServices from './Components/ListOfServices/ListOfServices';
 import AddService from './Components/AddService/AddService';
 import MakeAdmin from './Components/MakeAdmin/MakeAdmin';
+import PrivateRoute from './Components/PraivetRoute/PrivateRoute';
 
 
 
@@ -33,7 +34,7 @@ function App() {
         <Route exact path="/" component={Home}/>
           
           <Route path="/login" component={Login}/>
-           <Route path="/order" component={Order}/>
+           <PrivateRoute path="/order" component={Order}/>
            <Route path="/serviceList" component={ServiceList}/>
            <Route path="/reviewList" component={ReviewList}/>
            <Route path="/listOfServices" component={ListOfServices}/>

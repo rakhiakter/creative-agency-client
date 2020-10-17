@@ -1,31 +1,43 @@
-import React, { useState } from 'react';
+import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../App';
 import ReviewBar from '../ReviewBar/ReviewBar';
 import Sidebar from '../Sidebar/Sidebar';
 import './ReviewList.css';
+
+
 const containerStyle = {
   backgroundColor: "#F4FDFB",
   height: "100%",
 };
 const ReviewList = () => {
-  const [review, setReview] = useState({});
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+  const alert = faUserAlt()
+  const [review, setReview] = useState({
+    img: loggedInUser.photoURL
+  });
   const handleBlur = e => {
     const newReviews = { ...review };
-    newReviews=[e.target.name]  = e.target.value;
+    newReviews[e.target.name]  = e.target.value;
     setReview(newReviews);
   }
 
   const handleAdd = (e) => {
-    fetch('http:/localhost:5000/addReviews', {
-                 method: 'POST',
-                body: JSON.stringify(review) 
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data){
-                 
-                  console.log("review added");
-                }
-            })
+    console.log("submit added");
+    fetch("http://localhost:5000/addReviews", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(review),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+          alert("Order placed successfully");
+          document.querySelector("#review-done").reset();
+        if (data) {
+          console.log("review added");
+        }
+      
+      });
             e.preventDefault();
       
     
@@ -40,10 +52,10 @@ const ReviewList = () => {
             <Sidebar></Sidebar>
           </div>
           <div className="col-md-5">
-            <form class="mt-5">
+            <form class="mt-5" id="review-done" onClick={handleAdd}>
               <div class="form-group">
                 <input
-                    onBlur={handleBlur}
+                  onBlur={handleBlur}
                   type="text"
                   name="name"
                   class="form-control style"
@@ -53,7 +65,7 @@ const ReviewList = () => {
               </div>
               <div class="form-group">
                 <input
-                    onBlur={handleBlur}
+                  onBlur={handleBlur}
                   type="text"
                   class="form-control"
                   name="company"
@@ -63,7 +75,7 @@ const ReviewList = () => {
               </div>
               <div class="form-group">
                 <textarea
-                onBlur={handleBlur}
+                  onBlur={handleBlur}
                   name="description"
                   className="form-control"
                   id=""
@@ -73,7 +85,7 @@ const ReviewList = () => {
                   required
                 ></textarea>
               </div>
-              <button onClick={handleAdd} type="submit" className="order">
+              <button type="submit" className="order">
                 Submit
               </button>
             </form>

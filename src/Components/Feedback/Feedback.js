@@ -23,7 +23,9 @@ const Feedback = () => {
           </h3>
         </div>
         <div className="card-deck mt-5 three-card">
-          {reviewData.map((feedback) => (
+          {reviewData
+          .slice(0, 3)
+          .map((feedback) => (
             <Card feedback={feedback} key={feedback.name} />
           ))}
         </div>
