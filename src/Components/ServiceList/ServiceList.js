@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
 import ServiceBar from '../ServiceBar/ServiceBar';
+import ServiceCard from '../ServiceCard/ServiceCard';
 import Sidebar from '../Sidebar/Sidebar';
 import './ServiceList.css';
 
@@ -8,12 +10,15 @@ const containerStyle = {
   height: "100%",
 };
 const ServiceList = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   const [service, setService] = useState([]);
   useEffect(() => {
-    fetch("http:/localhost:5000/getOrder")
+    fetch("http://localhost:5000/getOrder/" + loggedInUser.email)
       .then((res) => res.json())
-      .then((data) => setService(data));
-      console.log(service);
+      .then((data) =>{ 
+        console.log(data);
+        setService(data)});
+     
   }, []);
     return (
       <section>
@@ -22,20 +27,12 @@ const ServiceList = () => {
           <div className="col-md-2 bar">
             <Sidebar></Sidebar>
           </div>
-          <div className="col-md-5 listCard">
-            <div className="row">
-              <img  className=" serviceImg"src={require("../../images/service1.png")} alt="" />
-              <button className="pending"><span className="pendingBtn">Pending</span></button>
-            </div>
-            <h5>Web & design</h5>
-            
-            <p>
-              We craft stunning and amazing web UI, <br/>
-              using a well drrafted UX to
-              fit your product.
-            </p>
+
+          <div className="row">
+            {service.map((serv) => (
+              <ServiceCard serv={serv}></ServiceCard>
+            ))}
           </div>
-          <div className="col-md-5"></div>
         </div>
       </section>
     );
