@@ -15,15 +15,8 @@ const ServiceBar = () => {
             </Link>
           </a>
 
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
-                <h3 class=" nav-link mr-5 activity">Services</h3>
-              </li>
-              <li class="nav-item active">
-               <p class="nav-link mr-5 ">name</p>
-              </li>
-            </ul>
+          <div>
+            <h3 class=" nav-link mr-5 activity">Services</h3>
           </div>
         </nav>
       </div>

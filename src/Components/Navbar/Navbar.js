@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 const Navbar = () => {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light ">
+      <nav class="navbar navbar-expand-lg navbar-light  ">
         <a class="navbar-brand ml-5" href="#">
           <Link to="/"> 
             
             <img
-              style={{ width: "120.26px", height: "56px" }}
+              style={{ width: "120.26px", height: "50px" }}
               src={require("../../images/logo.png")}
               alt=""
             />

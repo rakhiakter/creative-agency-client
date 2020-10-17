@@ -15,13 +15,13 @@ const ProvideService = () => {
        }, []);
     return (
       <section className="mt-5">
-        <div className="text-center mt-5">
-          <h3 className="provide">
+        <div className="text-center web">
+          <h3 className="provide headline ">
             Provide awesome <span className="service">service</span>
           </h3>
         </div>
-        
-        <div className="d-flex justify-content-center">
+
+        <div className="d-flex justify-content-center graphic">
           <div className="w-75 row mt-5 pt-5">
             {serviceData.map((provide) => (
               <ServiceDetails provide={provide}></ServiceDetails>

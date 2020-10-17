@@ -7,7 +7,7 @@ const Header = () => {
         <div className="bgColor">
          <Navbar></Navbar>  
          <ExactHeader></ExactHeader>
-
+        <div id="parabola"></div>
         </div>
     );
 };

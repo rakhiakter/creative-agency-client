@@ -1,6 +1,4 @@
 .service {
-   
-    
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
@@ -11,12 +9,21 @@
 }
 
 .provide {
-    
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
     font-size: 34px;
     line-height: 43px;
-     letter-spacing: 0.396px;
+    letter-spacing: 0.396px;
     color: #2D2D2D;
+}
+
+.web h3 {
+    margin-left: 465px;
+    padding-top: 150px;
+}
+
+.graphic {
+    margin-bottom: 150px;
+   
 }

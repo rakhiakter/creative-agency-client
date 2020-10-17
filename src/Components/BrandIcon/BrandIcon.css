@@ -1,8 +1,9 @@
 .brand img {
-    width: 99px;
-    height: 56px;
-    left: 663px;
+    width: 120px;
+    height: 110px;
+    left: 670px;
     top: 764px;
    align-items: center;
-    opacity: 0.7;
+    opacity: 0.9;
+    margin-top: 100px;
 }

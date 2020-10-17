@@ -1,8 +1,14 @@
 .bgColor {
     width: 1443px;
-    height: 750px;
+    height: 603px;
     left: 5px;
     top: -8.53px;
-   
     background: #FBD062;
+}
+
+#parabola {
+    width: 0;
+    height: 0;
+    border-top: 125px solid #FBD062;
+    border-right: 100vw solid transparent;
 }

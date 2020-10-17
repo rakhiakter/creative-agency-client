@@ -4,7 +4,7 @@ import people from '../../images/fram.png';
 const ExactHeader = () => {
     return (
       <main className="row d-flex align-items-center mt-5">
-        <div style={{ height: "600px " }} className="col-md-4 offset-md-1">
+        <div className="col-md-4 offset-md-1">
           <h1 className="headline">
             Let's Grow Your Brand To The <br />
             Next Level

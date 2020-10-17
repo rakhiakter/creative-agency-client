@@ -22,20 +22,22 @@ const Order = () => {
 
   const handleFileChange = (e) => {
     const newFile = e.target.files[0];
+    console.log(newFile);
     setFile(newFile);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+  
     const formData = new FormData();
     console.log(order);
     formData.append("file", file);
     formData.append("name", order.name);
     formData.append("email", order.email);
-    formData.append("graphic", order.graphic);
     formData.append("project", order.project);
+    formData.append("detail", order.detail);
     formData.append("price", order.price);
     
-    fetch("https://salty-plateau-71286.herokuapp.com/addADoctor", {
+    fetch("http://localhost:5000/addOrder", {
       method: "POST",
       body: formData,
     })
@@ -46,6 +48,7 @@ const Order = () => {
       .catch((error) => {
         console.error(error);
       });
+      e.preventDefault();
   };
     return (
       <section>
@@ -79,14 +82,14 @@ const Order = () => {
                   onBlur={handleBlur}
                   type="text"
                   class="form-control"
-                  name="graphic"
-                  placeholder="Graphic design"
+                  name="project"
+                  placeholder="Project"
                 />
               </div>
               <div class="form-group">
                 <textarea
                   onBlur={handleBlur}
-                  name="project"
+                  name="detail"
                   className="form-control"
                   id=""
                   cols="30"
@@ -104,7 +107,12 @@ const Order = () => {
                 />
               </div>
               <div className="form-group">
-                <input type="file" id="actual-btn" hidden />
+                <input
+                  onChange={handleFileChange}
+                  type="file"
+                  id="actual-btn"
+                  hidden
+                />
                 <label for="actual-btn">
                   <img
                     className="cloud"
