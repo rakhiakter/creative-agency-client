@@ -5,10 +5,7 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 import Sidebar from '../Sidebar/Sidebar';
 import './ServiceList.css';
 
-const containerStyle = {
-  backgroundColor: "#F4FDFB",
-  height: "100%",
-};
+
 const ServiceList = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   const [service, setService] = useState([]);
@@ -23,12 +20,10 @@ const ServiceList = () => {
     return (
       <section>
         <ServiceBar></ServiceBar>
-        <div style={containerStyle} className="container-fluid row">
-          <div className="col-md-2 bar">
+        <div  className="container-fluid row">
             <Sidebar></Sidebar>
-          </div>
 
-          <div className="row">
+          <div className="row col-md-10 d-flex">
             {service.map((serv) => (
               <ServiceCard serv={serv}></ServiceCard>
             ))}

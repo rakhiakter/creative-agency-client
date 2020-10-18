@@ -12,7 +12,7 @@ const containerStyle = {
 };
 const ReviewList = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-  const alert = faUserAlt()
+  // const alert = faUserAlt()
   const [review, setReview] = useState({
     img: loggedInUser.photoURL
   });

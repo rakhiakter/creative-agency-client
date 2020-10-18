@@ -9,7 +9,7 @@ const Sidebar = () => {
       >
         <ul className="list-unstyled">
           <li>
-            {" "}
+          
             <Link to="/order">
               <img
                 className="cart"

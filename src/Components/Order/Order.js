@@ -11,9 +11,14 @@ const containerStyle = {
   height: "100%",
 };
 
-const Order = () => {
+const Order = (props) => {
   const [order, setOrder] = useState({});
   const [file, setFile] = useState(null);
+var title;
+var image;
+if (props.location.state !== undefined){
+var {title, image } = props.location.state
+}
   const handleBlur = (e) => {
     const newOrder = { ...order };
     newOrder[e.target.name] = e.target.value;
@@ -91,6 +96,7 @@ const Order = () => {
                   class="form-control"
                   name="project"
                   placeholder="Project"
+                  defaultValue={title}
                 />
               </div>
               <div class="form-group">
@@ -102,6 +108,7 @@ const Order = () => {
                   cols="30"
                   rows="5"
                   placeholder="Project details"
+                  
                 ></textarea>
               </div>
               <div class="form-group">
