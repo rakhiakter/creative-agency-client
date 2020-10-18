@@ -17,6 +17,14 @@ useEffect(() => {
     });
 }, []);
 
+
+const handleChange = (e) => {
+  const id = e.target.id;
+  const otherStatus = e.target.value;
+  // orderUpdate(id, otherStatus)
+}
+
+
     return (
       <section>
         <ServicesBar></ServicesBar>
@@ -28,131 +36,50 @@ useEffect(() => {
             <table style={{ width: "100%", marginTop: "30px" }}>
               <thead>
                 <tr id="header">
-                  <th>Name</th>
-                  <th>Email ID</th>
-                  <th>Service</th>
-                  <th>Project Details</th>
-                  <th>Status</th>
+                  <th className="text-secondary" scope="col">
+                    Name
+                  </th>
+                  <th className="text-secondary" scope="col">
+                    Email ID
+                  </th>
+                  <th className="text-secondary" scope="col">
+                    Service
+                  </th>
+                  <th className="text-secondary" scope="col" Project Details>
+                    Project Details
+                  </th>
+                  <th className="text-secondary" scope="col">
+                    Status
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {serviceList.map((service, index) => (
+                {serviceList.map((service) => (
                   <tr>
                     <td>{service.name}</td>
                     <td>{service.email}</td>
                     <td>{service.project}</td>
                     <td>{service.detail}</td>
-                    <td>{service.orderStatus}</td>
+                    <td>
+                      {service.orderStatus}
+                      <select
+                        class="custom-select"
+                        id="dropMenu"
+                        defaultValue={service.orderStatus}
+                        // style={{
+                        //   color: colors[service.orderStatus],
+                        // }}
+                        onChange={{ handleChange }}
+                        id={service._id}
+                      >
+                        <option value="done">Done</option>
+                        <option value="on going">On Going</option>
+                        <option value="Pending">Pending</option>
+                      
+                      </select>
+                    </td>
                   </tr>
                 ))}
-                {/* <tr>
-                <td>Sufi Ahmed Hamim</td>
-                <td>sufi@gmail.com</td>
-                <td>Graphic Design</td>
-                <td>
-                  Lorem ipsum dolor sit amet,
-                  <br /> consectetur adipiscing elit.
-                </td>
-                <td>
-                  Pending
-
-                  <img
-                    className="arrow"
-                    src={require("../../images/arrow-ios-downward-outline 1.png")}
-                    alt=""
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Eve Ikbal</td>
-                <td>eva@gmail.com</td>
-                <td>Graphic Design</td>
-                <td>
-                  Lorem ipsum dolor sit amet,
-                  <br /> consectetur adipiscing elit.
-                </td>
-                <td>
-                  Done
-
-                  <img
-                    className="arrow"
-                    src={require("../../images/arrow-ios-downward-outline 1.png")}
-                    alt=""
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Baizid Ahmed</td>
-                <td>Bai@gmail.com</td>
-                <td>Graphic Design</td>
-                <td>
-                  Lorem ipsum dolor sit amet,
-                  <br /> consectetur adipiscing elit.
-                </td>
-                <td>
-                  Panding
-
-                  <img
-                    className="arrow"
-                    src={require("../../images/arrow-ios-downward-outline 1.png")}
-                    alt=""
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Tiya Rahman</td>
-                <td>tiya@gmail.com</td>
-                <td>Graphic Design</td>
-                <td>
-                  Lorem ipsum dolor sit amet,
-                  <br /> consectetur adipiscing elit.
-                </td>
-                <td>
-                  On going
-
-                  <img
-                    className="arrow"
-                    src={require("../../images/arrow-ios-downward-outline 1.png")}
-                    alt=""
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Niaj Mahmmud</td>
-                <td>niaj@gmail.com</td>
-                <td>Graphic Design</td>
-                <td>
-                  Lorem ipsum dolor sit amet,
-                  <br /> consectetur adipiscing elit.
-                </td>
-                <td>
-                  panding
-
-                  <img
-                    className="arrow"
-                    src={require("../../images/arrow-ios-downward-outline 1.png")}
-                    alt=""
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Jamil Mia</td>
-                <td>jamil@gmail.com</td>
-                <td>Graphic Design</td>
-                <td>
-                  Lorem ipsum dolor sit amet,
-                  <br /> consectetur adipiscing elit.
-                </td>
-                <td>
-                  Panding
-
-                  <img
-                    className="arrow"
-                    src={require("../../images/arrow-ios-downward-outline 1.png")}
-                    alt=""
-                  />
-                </td>
-              </tr> */}
               </tbody>
             </table>
           </div>
