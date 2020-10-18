@@ -5,7 +5,7 @@ const Card = (props) => {
     console.log(pic);
     return (
       <div className="card shadow-sm">
-        <div className="card-footer d-flex  align-items-center">
+        <div className=" d-flex  align-items-center feedbackImg">
           {
             
               pic !== undefined && 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import OrderBar from '../OrderBar/OrderBar';
-
 import Sidebar from '../Sidebar/Sidebar';
 import './Order.css';
+import { useAlert } from 'react-alert';
 
 
 const containerStyle = {
@@ -12,6 +12,7 @@ const containerStyle = {
 };
 
 const Order = (props) => {
+  const alert = useAlert();
   const [order, setOrder] = useState({
     orderStatus: "Pending" 
   });
@@ -55,7 +56,7 @@ var {title, image } = props.location.state
    .then((response) => response.json())
    .then((data) => {
      console.log(data);
-     alert("Order placed successfully")
+     alert.success("Order placed successfully")
      document.querySelector("#placed-order").reset()
    })
    .catch((error) => {

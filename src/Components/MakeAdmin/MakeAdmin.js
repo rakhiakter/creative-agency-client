@@ -20,7 +20,7 @@ const MakeAdmin = () => {
    
 
   
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     if (admin.email === '') {
       alert.error("please set your email")
     }
@@ -43,6 +43,7 @@ const MakeAdmin = () => {
      alert.error("Oh look, there is some error!")
     })
   }
+  e.preventDefault()
 }
     return (
       <section>
@@ -60,7 +61,7 @@ const MakeAdmin = () => {
                   type="email"
                   class="form-control em"
                   id="input-email"
-                  placeholder="rak@gmail.com"
+                  placeholder="enter email"
                   required
                 />
               </div>
