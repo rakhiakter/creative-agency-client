@@ -12,7 +12,9 @@ const containerStyle = {
 };
 
 const Order = (props) => {
-  const [order, setOrder] = useState({});
+  const [order, setOrder] = useState({
+    orderStatus: "Pending" 
+  });
   const [file, setFile] = useState(null);
 var title;
 var image;
@@ -44,6 +46,7 @@ var {title, image } = props.location.state
  formData.append("project", order.project);
  formData.append("detail", order.detail);
  formData.append("price", order.price);
+ formData.append("orderStatus", order.orderStatus);
 
  fetch("http://localhost:5000/addOrder", {
    method: "POST",
