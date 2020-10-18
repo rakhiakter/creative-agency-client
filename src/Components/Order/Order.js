@@ -112,7 +112,7 @@ var {title, image } = props.location.state
                   cols="30"
                   rows="5"
                   placeholder="Project details"
-                  // defaultValue={detail}
+                  
                 ></textarea>
               </div>
               <div class="form-group">

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import './AddBar.css';
 const AddBar = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
       <div>
         <nav class="navbar navbar-expand-lg navbar-light ">
@@ -16,8 +18,10 @@ const AddBar = () => {
           </a>
 
           <div>
-           
             <h3 class=" nav-link mr-5 activity">Add Service</h3>
+            <p style={{ marginLeft: "1000px", marginBottom: "50px" }}>
+              {loggedInUser && loggedInUser.name}
+            </p>
           </div>
         </nav>
       </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSpring, animated } from "react-spring";
+
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import './ProvideService.css';
 
@@ -16,9 +16,6 @@ const ProvideService = () => {
 
 
 
-      //  const AnimatedDonut = animated(Donut);
-      //  const props = useSpring({ value: 100, from: { value: 0 } });
-      //  return <AnimatedDonut percent={props.value} />;
     return (
       <section className="mt-5">
         <div className="text-center web">
@@ -29,7 +26,7 @@ const ProvideService = () => {
 
         <div className="d-flex justify-content-center graphic">
           <div className="w-75 row mt-5 pt-5">
-            {serviceData.map((provide) => (
+            {serviceData .slice(0, 3).map((provide) => (
               <ServiceDetails provide={provide}></ServiceDetails>
             ))}
           </div>

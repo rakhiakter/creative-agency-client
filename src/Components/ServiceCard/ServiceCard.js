@@ -16,7 +16,7 @@ const ServiceCard = ({serv}) => {
                 />
               ) : (
                 <img
-                  style={{ height: "200px" }}
+                  style={{ height: "60px" }}
                   src={`data:image/png;base64,${serv.image.img}`}
                 />
               ))}

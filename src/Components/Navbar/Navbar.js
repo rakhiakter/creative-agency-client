@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import {UserContext} from "../../App";
 import './Navbar.css';
 const Navbar = () => {
+   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+   const [isAdmin, setIsAdmin] = useState(false);
+
+   useEffect(() => {
+     fetch("http://localHost:5000/isAdmin", {
+       method: "POST",
+       headers: { "content-type": "application/json" },
+       body: JSON.stringify({ email: loggedInUser.email }),
+     })
+       .then((res) => res.json())
+       .then((data) => setIsAdmin(data));
+   }, []);
+
     return (
       <nav class="navbar navbar-expand-lg navbar-light  ">
         <a class="navbar-brand ml-5" href="#">
@@ -50,7 +64,13 @@ const Navbar = () => {
             <Link to="/login">
               <button class="button">Login</button>
             </Link>
-            <Link to="/listOfServices">
+            <Link
+            to={isAdmin === true?
+            "/listOfServices"
+            :
+          "/order"
+          }
+            >
               <button class="button">Admin</button>
             </Link>
           </ul>
