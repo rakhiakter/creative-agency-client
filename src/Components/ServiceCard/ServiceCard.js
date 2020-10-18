@@ -6,23 +6,28 @@ const ServiceCard = ({serv}) => {
       <div>
         <div className="col-md-5 listCard">
           <div className="row">
-            {serv.img !== undefined &&
-              (serv.img.substring(0, 3) === "htt" ? (
-                <img className=" serviceImg" src={serv.img} alt="" />
-              ) : (
-                <img
-                  className=" serviceImg"
-                  src={require(`../../images/${serv.img}`)}
+
+            {serv.image &&
+              (typeof serv.image === "string" ? (
+                <img className="img-fluid"
+                  style={{ height: "50px" }}
+                  src={require(`../../images/${serv.image}`)}
                   alt=""
                 />
+              ) : (
+                <img
+                  style={{ height: "200px" }}
+                  src={`data:image/png;base64,${serv.image.img}`}
+                />
               ))}
+
             <button className="pending">
-              <span className="pendingBtn">Pending</span>
+              <span className="pendingBtn">{serv.orderStatus}</span>
             </button>
           </div>
-          <h5>{serv.title}</h5>
+          <h5>{serv.project}</h5>
 
-          <p>{serv.paragraph}</p>
+          <p>{serv.detail}</p>
         </div>
       </div>
     );

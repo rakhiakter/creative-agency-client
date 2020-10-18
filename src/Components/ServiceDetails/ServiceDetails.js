@@ -8,13 +8,20 @@ const ServiceDetails = ({provide}) => {
           to={{
             pathname: "/order",
             state: { ...provide }
-          }}
-        >
-          <img
+          }}>
+            {
+            provide.image &&
+           (  
+             typeof ( provide.image )=== "string"?<img
             style={{ height: "50px" }}
-            src={require(`../../images/${provide.img}`)}
+            src={require(`../../images/${provide.image}`)}
             alt=""
-          />
+          /> :
+           
+           <img style={{height: '200px'}} src={`data:image/png;base64,${provide.image.img}`}/>)
+          
+        }
+        
           <h5 className="mt-3 mb-3">{provide.title}</h5>
           <p className="text-secondary">{provide.paragraph}</p>
         </Link>

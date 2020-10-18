@@ -19,9 +19,8 @@ useEffect(() => {
 
 
 const handleChange = (e) => {
-  const id = e.target.id;
-  const otherStatus = e.target.value;
-  // orderUpdate(id, otherStatus)
+ 
+  
 }
 
 
