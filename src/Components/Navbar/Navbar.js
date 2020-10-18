@@ -5,8 +5,7 @@ const Navbar = () => {
     return (
       <nav class="navbar navbar-expand-lg navbar-light  ">
         <a class="navbar-brand ml-5" href="#">
-          <Link to="/"> 
-            
+          <Link to="/">
             <img
               style={{ width: "120.26px", height: "50px" }}
               src={require("../../images/logo.png")}
@@ -50,6 +49,9 @@ const Navbar = () => {
             </li>
             <Link to="/login">
               <button class="button">Login</button>
+            </Link>
+            <Link to="/listOfServices">
+              <button class="button">Admin</button>
             </Link>
           </ul>
         </div>

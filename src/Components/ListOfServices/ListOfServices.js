@@ -60,14 +60,11 @@ const handleChange = (e) => {
                     <td>{service.project}</td>
                     <td>{service.detail}</td>
                     <td>
-                      {service.orderStatus}
                       <select
                         class="custom-select"
                         id="dropMenu"
                         defaultValue={service.orderStatus}
-                        // style={{
-                        //   color: colors[service.orderStatus],
-                        // }}
+                        
                         onChange={{ handleChange }}
                         id={service._id}
                       >
