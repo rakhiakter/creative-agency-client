@@ -1,13 +1,27 @@
 # Creative Agency
 ## Features
-1. 
-2. b
+1. Creative Agency is a freelance service provider.
+2. In this website a user can buy different web related services.
+3. User can place orders and manage his orders in Dashboard.
+4. User can login this site by Google Account.
+5. Users can give their reviews.
+6. Users also can list their services.That means, if a user order any thing then it add his service list.
+7. Users also see their order in home page.
+8. In this site also added Admin access.
+9. Admin can monitoring his site very easily and add new services as well.
+10. If admin want, he can make another new admin.
 ## ScreenShots
 ![Home Page](home.png)
 ![Login](login.png)
 ![Admin area](service.png)
 
-## LiveSite Link
+## Technology
+
+## Tools
+
+## LiveSite link
+
+## Resume
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
