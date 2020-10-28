@@ -1,4 +1,6 @@
 # Creative Agency
+## OverView
+This a full stack application.
 ## Features
 1. Creative Agency is a freelance service provider.
 2. In this website a user can buy different web related services.
@@ -18,11 +20,20 @@ React, React-router-dom, JavaScript, CSS3, Bootstrap, Bootstrap4, React-bootstra
 Git, Heroku, Netlify, Figma, VS Code, Chrome Dev Tool.
 
 ## LiveSite link
-https://creative-agency-311af.web.app/listOfServices
+https://creative-agency-311af.web.app
 
 ## Resume
 [https://drive.google.com/file/d/1r0AJmoRTKkRU9aZjMwurN2SfN1cHxCyP/view?usp=sharing](https://drive.google.com/file/d/1r0AJmoRTKkRU9aZjMwurN2SfN1cHxCyP/view?usp=sharing)
 
+# Packages
+1. React
+2. Bootstrap4
+3. react-alert
+4. react-alert-template-basic
+5. react-dom
+6. react-multi-carousel
+7. react-router-dom
+    
 ## ScreenShots
 ![Home Page](home.png)
 ![Login](login.png)
