@@ -15,11 +15,14 @@
 ![Login](login.png)
 ![Admin area](service.png)
 
-## Technology
+## Technology 
+React, React-router-dom, JavaScript, CSS3, Bootstrap, Bootstrap4, React-bootstrap, Icons,Express.js, MongoDB, Node.js, HTML5, Firebase.
 
-## Tools
+## Tools 
+Git, Heroku, Netlify, Figma, VS Code, Chrome Dev Tool.
 
 ## LiveSite link
+https://creative-agency-311af.web.app/listOfServices
 
 ## Resume
 
