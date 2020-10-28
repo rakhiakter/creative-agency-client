@@ -5,9 +5,11 @@ import './Navbar.css';
 const Navbar = () => {
    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
    const [isAdmin, setIsAdmin] = useState(false);
-
+    const logOut = () => {
+      
+    }
    useEffect(() => {
-     fetch("http://localHost:5000/isAdmin", {
+     fetch("https://creative-agency-abc.herokuapp.com/isAdmin", {
        method: "POST",
        headers: { "content-type": "application/json" },
        body: JSON.stringify({ email: loggedInUser.email }),
@@ -61,16 +63,16 @@ const Navbar = () => {
                 Contact Us
               </a>
             </li>
-            <Link to="/login">
-              <button class="button">Login</button>
-            </Link>
-            <Link
-            to={isAdmin === true?
-            "/listOfServices"
-            :
-          "/order"
-          }
-            >
+            {loggedInUser && loggedInUser.email ? (
+              <Link to="/login">
+                <button class="button" onClick={logOut}>Logout</button>
+              </Link>
+            ) : (
+              <Link to="/login">
+                <button class="button">Login</button>
+              </Link>
+            )}
+            <Link to={isAdmin === true ? "/listOfServices" : "/order"}>
               <button class="button">Admin</button>
             </Link>
           </ul>

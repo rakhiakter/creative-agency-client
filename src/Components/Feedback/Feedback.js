@@ -8,7 +8,7 @@ import Card from '../Card/Card';
 const Feedback = () => {
    const [reviewData, setReviewData] = useState([]);
    useEffect(() => {
-     fetch("http://localhost:5000/getReviews")
+     fetch("https://creative-agency-abc.herokuapp.com/getReviews")
        .then((res) => res.json())
        .then((data) => {
          console.log(data);

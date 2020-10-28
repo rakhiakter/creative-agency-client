@@ -49,7 +49,7 @@ var {title, image } = props.location.state
  formData.append("price", order.price);
  formData.append("orderStatus", order.orderStatus);
 
- fetch("http://localhost:5000/addOrder", {
+ fetch("https://creative-agency-abc.herokuapp.com/addOrder", {
    method: "POST",
    body: formData,
  })

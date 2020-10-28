@@ -9,7 +9,7 @@ const ServiceDetails = ({provide}) => {
 const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
     return (
-      <div className="col-md-4 text-center service-card">
+      <div className="col-md-4 col-sm-12 text-center service-card">
         <Link
           to={{
             pathname: "/order",

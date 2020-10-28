@@ -24,7 +24,7 @@ const ReviewList = () => {
 
   const handleAdd = (e) => {
     console.log("submit added");
-    fetch("http://localhost:5000/addReviews", {
+    fetch("https://creative-agency-abc.herokuapp.com/addReviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(review),

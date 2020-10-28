@@ -9,7 +9,7 @@ const Styles = {
 const ListOfServices = () => {
 const [serviceList, setServiceList] = useState([]);
 useEffect(() => {
-  fetch("http://localhost:5000/getOrder" )
+  fetch("https://creative-agency-abc.herokuapp.com/getOrder" )
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
