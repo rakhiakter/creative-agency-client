@@ -10,10 +10,6 @@
 8. In this site also added Admin access.
 9. Admin can monitoring his site very easily and add new services as well.
 10. If admin want, he can make another new admin.
-## ScreenShots
-![Home Page](home.png)
-![Login](login.png)
-![Admin area](service.png)
 
 ## Technology 
 React, React-router-dom, JavaScript, CSS3, Bootstrap, Bootstrap4, React-bootstrap, Icons,Express.js, MongoDB, Node.js, HTML5, Firebase.
@@ -25,6 +21,11 @@ Git, Heroku, Netlify, Figma, VS Code, Chrome Dev Tool.
 https://creative-agency-311af.web.app/listOfServices
 
 ## Resume
+
+## ScreenShots
+![Home Page](home.png)
+![Login](login.png)
+![Admin area](service.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
