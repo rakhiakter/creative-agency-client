@@ -21,7 +21,7 @@ Git, Heroku, Netlify, Figma, VS Code, Chrome Dev Tool.
 https://creative-agency-311af.web.app/listOfServices
 
 ## Resume
-https://drive.google.com/file/d/1r0AJmoRTKkRU9aZjMwurN2SfN1cHxCyP/view?usp=sharing
+[https://drive.google.com/file/d/1r0AJmoRTKkRU9aZjMwurN2SfN1cHxCyP/view?usp=sharing](https://drive.google.com/file/d/1r0AJmoRTKkRU9aZjMwurN2SfN1cHxCyP/view?usp=sharing)
 
 ## ScreenShots
 ![Home Page](home.png)
